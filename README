@@ -1,0 +1,43 @@
+Conclusion
+----------
+-Projekt implementuje vsetky sucasti zadania. Autor projektu samozrejme nerobil
+ projekt na opustenej luke, ako povedal Pan Garant predmetu, a inspiroval sa trosku
+ na internete, ale celemu uvedenemu kodu autor rozmie a vie jeho funkcnost v
+ pripade potreby ozrejmit.
+
+Co sa tyka funkcionality tak:
+- su podporovane viacslovne a viacznakove nazvy premennych
+- nakolko sa pravdivostna tabulka zvycajne vypisuje zacinajuc hodnotami True
+je, aj napriek znizenej rychlosti programu(nejedna sa o zhorsenie casovej zlozitosti),
+pravdivostna tabulka raz nadbytocne reverzovana.
+-zdrojovy kod je strukturovany a dokladne okomentovany.
+-autor sa snazil v projekte elegantne vyriesit stanoveny problem a mnoho sa pritom naucil
+preto sa projekt povazuje za uspesny
+
+About
+-----
+Objective of this school project is to transform disjunctive normal form (DNF)
+to ordered binary decision diagram (BDD), to get it's truth table and then reduced 
+or to get reduced ordered BDD. Project is written in Haskell.
+
+Run
+---
+The only source code is file formula-2-bdd.hs. For compilation
+run `make`. This command will create executable file `formula-2-bdd`.
+
+Usage
+-------
+./formula-2-bdd [-i | -b | -t | -r | -c] DNF_FILE
+
+-i - print DNF representation from internal representation
+-t - print truth table
+-b - print BDD
+-r - print ROBDD
+
+Print BDDs
+---------------
+BDD is printed according to format from specification thus '->' is negative subtree
+ and => is positive:
+a->0
+a=>b->0
+a=>b=>1
